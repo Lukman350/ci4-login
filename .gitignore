@@ -1,0 +1,43 @@
+node_modules/
+public/images/uploads/*
+!public/images/uploads/default.jpg
+.env
+
+#-------------------------
+# Temporary Files
+#-------------------------
+writable/cache/*
+!writable/cache/index.html
+
+writable/logs/*
+!writable/logs/index.html
+
+writable/session/*
+!writable/session/index.html
+
+writable/uploads/*
+!writable/uploads/index.html
+
+writable/debugbar/*
+!writable/debugbar/index.html
+
+writable/**/*.db
+writable/**/*.sqlite
+
+php_errors.log
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+
+#-------------------------
+# User Guide Temp Files
+#-------------------------
+user_guide_src/build/*
+
+#-------------------------
+# Test Files
+#-------------------------
+tests/coverage*
