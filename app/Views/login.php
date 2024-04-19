@@ -3,6 +3,15 @@
     <div class="py-8 px-6 max-w-md mx-auto bg-white bg-opacity-30 rounded-lg shadow-lg backdrop-blur-xl backdrop-filter">
       <h1 class="text-2xl font-bold mb-4 text-gray-800">Coralis Studio - Login</h1>
 
+      <?php
+      if (isset($success)) :
+      ?>
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+          <strong class="font-bold">Success!</strong>
+          <span class="block"><?= $success ?></span>
+        </div>
+      <?php endif; ?>
+
       <?php if (isset($validation)) : ?>
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
           <strong class="font-bold">There were some problems with your input</strong>
@@ -22,10 +31,13 @@
         <div class="mb-4">
           <label for="password" class="block text-gray-700 font-semibold mb-2">Password:</label>
           <input type="password" id="password" name="password" class="bg-transparent border rounded-lg shadow border-gray-300 focus:border-blue-500 text-white caret-blue-500 ring-2 outline-none py-2 px-4 block w-full appearance-none leading-normal" required>
+          <div class="mt-2">
+            <a href="/auth/forgot_password" class="text-blue-700 font-semibold hover:underline">Forgot password?</a>
+          </div>
         </div>
         <button type="submit" class="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 text-white font-bold py-2 px-4 rounded-full border-gray-300 hover:shadow-lg transition duration-300 ease-in-out focus:ring-purple-500">Login</button>
 
-        <p class="text-center mt-4 text-gray-700">Don't have an account? <a href="/auth/register" class="text-blue-500 font-semibold hover:underline">Register</a></p>
+        <p class="text-center mt-4 text-gray-700">Don't have an account? <a href="/auth/register" class="text-blue-700 font-semibold hover:underline">Register</a></p>
       </form>
     </div>
   </div>

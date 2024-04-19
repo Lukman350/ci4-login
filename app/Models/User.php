@@ -27,6 +27,7 @@ class User extends Model
     ],
     'password' => [
       'required' => 'Password is required',
+      'min_length' => 'Password is too short. It must be at least 8 characters long',
     ],
     'profile' => [
       'max_size' => 'Maximum file size is 1MB',
